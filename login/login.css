@@ -1,0 +1,108 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #f0f0f0; /* 페이지 배경색 */
+}
+
+.frame {
+    width: 375px;
+    height: 812px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: url('../assets/background.jpg') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px; /* 프레임에 둥근 모서리 추가 */
+}
+
+.container {
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.title {
+    margin-top: 77px; /* 상단 간격 조정 */
+    color: #8B4513;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 20px; /* 하단 간격 조정 */
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+    padding: 0 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #8B4513;
+    font-weight: bold;
+}
+
+.input-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="password"] {
+    flex: 1;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    background: transparent;
+    outline: none;
+    box-sizing: border-box;
+    margin-right: 10px;
+    color: #8B4513; /* 텍스트 색상 추가 */
+}
+
+.submit-btn {
+    width: calc(100% - 40px);
+    padding: 15px;
+    border: none;
+    border-radius: 25px;
+    background-color: #FFCE4F;
+    color: white;
+    font-size: 1.2em;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    margin: 20px auto 0 auto;
+    display: block;
+}
+
+.submit-btn:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.signup-link {
+    margin-top: 10px;
+    color: #8B4513;
+    font-size: 0.9em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.signup-link a {
+    color: #8B4513;
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
