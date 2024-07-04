@@ -36,40 +36,38 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const form = document.getElementById('setup-form');
     form.addEventListener('submit', function (e) {
-        e.preventDefault();
+    e.preventDefault();
 
-        const babyBirth = `${document.getElementById('baby-birth-year').value}-${document.getElementById('baby-birth-month').value}-${document.getElementById('baby-birth-day').value}`;
-        const motherBirth = `${document.getElementById('mother-birth-year').value}-${document.getElementById('mother-birth-month').value}-${document.getElementById('mother-birth-day').value}`;
+    const babyBirth = `${document.getElementById('baby-birth-year').value}-${document.getElementById('baby-birth-month').value}-${document.getElementById('baby-birth-day').value}`;
+    const motherBirth = `${document.getElementById('mother-birth-year').value}-${document.getElementById('mother-birth-month').value}-${document.getElementById('mother-birth-day').value}`;
 
-        const formData = new FormData();
-        formData.append('profile_image', profileImageInput.files[0]);
-        formData.append('baby_nickname', document.getElementById('baby-nickname').value);
-        formData.append('baby_birth', babyBirth);
-        formData.append('baby_gender', selectedGender);
-        formData.append('mother_nickname', document.getElementById('mother-nickname').value);
-        formData.append('mother_birth', motherBirth);
+    const formData = new FormData();
+    formData.append('username', localStorage.getItem('username'));
+    formData.append('password', localStorage.getItem('password'));
+    formData.append('profile_image', profileImageInput.files[0]);
+    formData.append('baby_nickname', document.getElementById('baby-nickname').value);
+    formData.append('baby_birth', babyBirth);
+    formData.append('baby_gender', selectedGender);
+    formData.append('mother_nickname', document.getElementById('mother-nickname').value);
+    formData.append('mother_birth', motherBirth);
 
-        fetch('/accounts/register/', {
-            method: 'POST',
-            headers: {
-                'Authorization': 'Bearer ' + localStorage.getItem('token') // 토큰을 로컬 저장소에서 가져와서 헤더에 추가
-            },
-            body: formData
-        })
-        .then(response => response.json())
-        .then(data => {
-            if (data.token) {
-                // 응답 데이터 처리
-                console.log('성공:', data);
-                // 토큰 저장
-                localStorage.setItem('token', data.token);
-                // 추가 처리 로직 (예: 페이지 이동)
-            } else {
-                console.error('실패:', data);
-            }
-        })
-        .catch((error) => {
-            console.error('에러 발생:', error);
-        });
+    fetch('http://127.0.0.1:8000/accounts/register/', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.token) {
+            console.log('성공:', data);
+            localStorage.setItem('token', data.token);
+            window.location.href = '/2024-Herethon-9/login/login.html';
+        } else {
+            console.error('실패:', data);
+        }
+    })
+    .catch((error) => {
+        console.error('네트워크 오류:', error);
+        // 적절한 오류 처리 로직 추가
     });
+});
 });
