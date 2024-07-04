@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setup</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="setup.css">
+</head>
+<body>
+    <div class="frame">
+        <div id="content">
+            <div class="container">
+                <div class="profile-picture">
+                    <img src="../assets/사진.png" alt="사진" id="profile-img">
+                    <input type="file" id="profile-image" style="display: none;" accept="image/*">
+                </div>
+                <div class="form-background">
+                    <form id="setup-form">
+                        <div class="input-group">
+                            <label for="baby-nickname">아기 별명</label>
+                            <input type="text" id="baby-nickname" placeholder="아기 별명" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="baby-birth">아기 생일</label>
+                            <div class="dob-inputs">
+                                <input type="text" id="baby-birth-year" placeholder="YYYY" maxlength="4">
+                                <input type="text" id="baby-birth-month" placeholder="MM" maxlength="2">
+                                <input type="text" id="baby-birth-day" placeholder="DD" maxlength="2">
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label>아기 성별</label>
+                            <div class="gender-inputs">
+                                <button type="button" class="gender-btn" id="male-btn" value="남자">남자</button>
+                                <button type="button" class="gender-btn" id="female-btn" value="여자">여자</button>
+                            </div>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="input-group">
+                            <label for="mother-nickname">엄마 별명</label>
+                            <input type="text" id="mother-nickname" placeholder="엄마 별명" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="mother-birth">엄마 생일</label>
+                            <div class="dob-inputs">
+                                <input type="text" id="mother-birth-year" placeholder="YYYY" maxlength="4">
+                                <input type="text" id="mother-birth-month" placeholder="MM" maxlength="2">
+                                <input type="text" id="mother-birth-day" placeholder="DD" maxlength="2">
+                            </div>
+                        </div>
+                        <button type="submit" class="submit-btn">완료</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="setup.js"></script>
+</body>
+</html>
