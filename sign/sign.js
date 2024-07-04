@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
     form.addEventListener('submit', function (e) {
         e.preventDefault();
 
-        const email = document.getElementById('email').value;
+        const username = document.getElementById('username').value;
         const password = document.getElementById('password').value;
         const passwordConfirm = document.getElementById('password-confirm').value;
 
@@ -20,32 +20,9 @@ document.addEventListener('DOMContentLoaded', function () {
             return;
         }
 
-        // API 요청 준비
-        const formData = new FormData();
-        formData.append('username', email);
-        formData.append('password', password);
-
-        fetch('/accounts/register/', {
-            method: 'POST',
-            body: formData
-        })
-        .then(response => response.json())
-        .then(data => {
-            if (data.token) {
-                // 응답 데이터 처리
-                console.log('성공:', data);
-                // 토큰 저장
-                localStorage.setItem('token', data.token);
-                // setup 페이지로 이동
-                window.location.href = '/setup/setup.html';
-            } else {
-                console.error('실패:', data);
-                alert('회원가입에 실패했습니다. 다시 시도해주세요.');
-            }
-        })
-        .catch((error) => {
-            console.error('에러 발생:', error);
-            alert('회원가입 중 에러가 발생했습니다. 다시 시도해주세요.');
-        });
+        localStorage.setItem('username', username);
+        localStorage.setItem('password', password);
+        window.location.href = '/setup/setup.html';
+       
     });
 });
