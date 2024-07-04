@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         localStorage.setItem('username', username);
         localStorage.setItem('password', password);
-        window.location.href = '/setup/setup.html';
+        window.location.href = '/2024-Herethon-9/setup/setup.html';
        
     });
 });
