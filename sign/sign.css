@@ -1,0 +1,111 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.title {
+    margin-top: 77px; /* 상단 간격 조정 */
+    color: #8B4513;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 20px; /* 하단 간격 조정 */
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+    padding: 0 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #8B4513;
+    font-weight: bold;
+}
+
+.input-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+input[type="email"],
+input[type="password"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    background: transparent;
+    outline: none;
+    box-sizing: border-box;
+    margin-right: 10px;
+}
+
+.check-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    background-color: #FFCE4F;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.check-btn:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+input[type="password"]#password-confirm {
+    margin-top: 10px;
+}
+
+.checkbox-group {
+    margin: 20px 0;
+    padding: 0 20px;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.checkbox-item label {
+    flex: 1;
+    margin-left: 10px;
+    color: #8B4513;
+}
+
+.checkbox-item a {
+    text-decoration: none;
+    color: #8B4513;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.submit-btn {
+    width: calc(100% - 40px); /* 패딩만큼 너비 조정 */
+    padding: 15px;
+    border: none;
+    border-radius: 25px;
+    background-color: #FFCE4F;
+    color: white;
+    font-size: 1.2em;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    margin: 20px auto 0 auto; /* 간격 조정 */
+    display: block;
+}
+
+.submit-btn:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
