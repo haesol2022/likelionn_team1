@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>feed-revise</title>
+    <link rel="stylesheet" href="feed_revise.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content"> <!-- 상단의 헤더 문구 및 버튼 -->
+                <button class="back-btn">
+                    <img src="../images/back_icon.png" alt="돌아가기">
+                </button>
+            </div>
+        </header>
+        
+        <main>
+            <div class="post-image-placeholder">
+                <img src="https://via.placeholder.com/170x230" alt="이미지 2" class="left-image">
+                <div class="right-images">
+                    <img src="https://via.placeholder.com/133x131" alt="이미지 1" class="right-image">
+                    <img src="../images/pic_insert_icon.png" alt="이미지 삽입" class="insert-icon">
+                </div>
+            </div>
+            <textarea class="post-text"></textarea>
+
+            <hr class="divider">
+            <div class="location-add">
+                <img src="../images/location_insert_icon.png" alt="위치 아이콘">
+                <span>위치 추가</span>
+                <img class="arrow-icon" src="../images/go_icon.png" alt="화살표 아이콘">
+            </div>
+            <hr class="divider">
+            <div class="music-add">
+                <img src="../images/music_insert_icon.png" alt="음악 아이콘">
+                <span>음악 추가</span>
+                <img class="arrow-icon" src="../images/go_icon.png" alt="화살표 아이콘">
+            </div>
+            <button class="okay-btn">확인</button>
+        </main>
+    </div>
+    <script src="feed_revise.js"></script>
+</body>
+</html>

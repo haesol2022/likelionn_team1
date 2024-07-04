@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>community</title>
+    <link rel="stylesheet" href="community.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <button class="back-btn">
+                    <img src="../images/back_icon.png" alt="돌아가기">
+                </button>
+                <p class="page-title">커뮤니티</p>
+                <button class="search-btn">
+                    <img src="../images/search_header_icon.png" alt="검색">
+                </button>
+                <button class="home-btn">
+                    <img src="../images/home_icon.png" alt="홈">
+                </button>
+            </div>
+        </header>
+
+        <main>
+            <div class="whats-new-section">
+                <div class="whats-new-header">
+                    <p class="whatsnew">What's New</p>
+                    <button class="add-story-btn" onclick="toggleModal('story-modal', event)">
+                        <img src="../images/story_icon.png" alt="+">
+                    </button>
+                </div>
+                <div class="stories-container">
+                    <div class="story">
+                        <img src="https://via.placeholder.com/136x147" alt="Story 1">
+                        <div class="story-overlay">
+                            <p class="story-id">Love_sujin</p>
+                            <p class="story-comment">낮잠 재우기 성공~!</p>
+                        </div>
+                    </div>
+                    <div class="story">
+                        <img src="https://via.placeholder.com/136x147" alt="Story 2">
+                        <div class="story-overlay">
+                            <p class="story-id">hayul_0312</p>
+                            <p class="story-comment">서울숲 나들이:)</p>
+                        </div>
+                    </div>
+                    <div class="story">
+                        <img src="https://via.placeholder.com/136x147" alt="Story 3">
+                        <div class="story-overlay">
+                            <p class="story-id">jihye_93</p>
+                            <p class="story-comment">집에서 휴식</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profiles-posts-section">
+                <div class="profile-post-row">
+                    <div class="profile">
+                        <img src="https://via.placeholder.com/60" alt="Profile 1">
+                        <div class="profile-info">
+                            <p class="profile-id">jihye_93</p>
+                            <div class="profile-label">프로필</div>
+                        </div>
+                    </div>
+
+                    <div class="post">
+                        <div class="post-images">
+                            <img src="https://via.placeholder.com/120x80" alt="Post Image 1" class="post-image-horizontal">
+                            <div class="post-content">
+                                <div class="heart-and-like">
+                                    <span id="like-icon-1" class="heart-icon" onclick="toggleLike1('like-icon-1')">🤍</span>
+                                    <span id="like-count-1">4289</span>
+                                    <span>👍2,762</span>
+                                </div>
+                                <p class="post-text">아이 유치원 하원 후 엄마들과 아이들이랑 잠시 카페에서 티타임...</p>
+                            </div>
+                        </div>
+                        <img src="https://via.placeholder.com/112x149" alt="Post Image 2" class="post-image-vertical">
+                        <button class="post-update-btn" onclick="toggleModal('modal', event)">
+                            <img src="../images/post_update.png" alt="수정">
+                        </button>
+                    </div>
+                </div>
+
+                <div class="profile-post-row">
+                    <div class="profile">
+                        <img src="https://via.placeholder.com/60" alt="Profile 2">
+                        <div class="profile-info">
+                            <p class="profile-id">Jinny0813</p>
+                            <div class="profile-label">프로필</div>
+                        </div>
+                    </div>
+                    <div class="post">
+                        <div class="post-images">
+                            <img src="https://via.placeholder.com/120x80" alt="Post Image 1" class="post-image-horizontal">
+                            <div class="post-content">
+                                <p class="heart-and-like">
+                                    <span id="like-icon-2" class="heart-icon" onclick="toggleLike2('like-icon-2')">🤍</span>
+                                    <span id="like-count-2">3782</span>
+                                    <span>👍1,357</span>
+                                </p>
+                                <p class="post-text">오늘은 채아 방 인테리어! 색상, 가구, 배치 모두 내가 직접 고르고 선택한 것...</p>
+                            </div>
+                        </div>
+                        <img src="https://via.placeholder.com/112x149" alt="Post Image 2" class="post-image-vertical">
+                        <button class="post-update-btn" onclick="toggleModal('modal', event)">
+                            <img src="../images/post_update.png" alt="수정">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <nav class="bottom-nav">
+                <a href="../home/home.html"><img src="../images/nav_home.png" alt="홈 아이콘"></a>
+                <a href="../baby/baby.html"><img src="../images/nav_baby.png" alt="아이 아이콘"></a>
+                <a href="../me/me.html"><img src="../images/nav_me.png" alt="나 아이콘"></a>
+                <a href="../location/location.html"><img src="../images/nav_location.png" alt="장소 아이콘"></a>
+                <a href="../community/community.html"><img src="../images/nav_community.png" alt="커뮤니티 아이콘"></a>
+            </nav>
+        </footer>
+    </div>
+
+    <!-- 모달창 -->
+    <div id="story-modal" class="modal" onclick="toggleModal('story-modal', event)">
+        <div class="modal-content">
+            <button class="story-btn" onclick="goToStoryPage()">스토리</button>
+            <button class="post-btn" onclick="goToPostPage()">게시물</button>            
+        </div>
+    </div>
+
+    <div id="modal" class="modal" onclick="toggleModal('modal', event)">
+        <div class="modal-content">
+            <button class="edit-btn" onclick="goToRevisePage()">수정</button>
+            <button class="delete-btn" onclick="toggleModal('delete-modal', event)">삭제</button>
+        </div>
+    </div>
+
+    <!-- 삭제 모달 -->
+    <div id="delete-modal" class="delete-modal-content">
+        <p class="ruok">삭제하시겠습니까?</p><p><br>이 게시물과 관련된 내용이<br>모두 삭제됩니다.</p>
+            <div class="delete-modal-buttons">
+                <button class="confirm-btn" onclick="toggleDeleteModal()">네</button>
+                <button class="cancel-btn" onclick="toggleDeleteModal()">아니오</button>
+            </div>
+    </div>
+
+<!-- 반투명 흰색 배경 오버레이 -->
+<div id="overlay" class="overlay" onclick="toggleDeleteModal()"></div>
+
+
+    <script src="community.js"></script>
+</body>
+</html>
