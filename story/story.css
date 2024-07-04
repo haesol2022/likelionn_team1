@@ -1,0 +1,112 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+    overflow: hidden;
+}
+
+.container {
+    width: 393px;
+    height: 852px;
+    background-image: url(../images/background.png);
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+header {
+    width: 100%;
+}
+
+.header-content {
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.page-title {
+    font-size: 23.5px;
+    font-weight: bold;
+    color: #6D460B;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.back-btn {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-60%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.post-image-placeholder {
+    width: 317px;
+    height: 498px;
+    border: 2px solid #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    background: linear-gradient(180deg, #FFFBDF 0%, #FAF4F5 48%, #F7FCE0 100%);
+    box-shadow: 2px 2px 6px 2px rgba(0, 0, 0, 0.15);
+    margin-top: 40px;
+}
+
+.post-image-placeholder img {
+   margin-top: 20px;
+   margin-left: 20px;
+}
+
+.post-text {
+    width: 317px;
+    height: 50px;
+    border: none;
+    border-radius: 15px;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    resize: none;
+    box-sizing: border-box;
+    border-radius: 15px;
+    background: linear-gradient(180deg, #F2E8F8 0%, #FAF4F4 50.5%, #E7FDFE 100%);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+.share-btn {
+    width: 128px;
+    height: 42px;
+    background-color: #FFCE4F;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #fff;
+    margin-top: 33.5px;
+    cursor: pointer;
+    border-radius: 20px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+}

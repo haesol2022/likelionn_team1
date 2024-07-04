@@ -1,0 +1,212 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+    overflow: hidden;
+}
+
+.container {
+    width: 393px;
+    height: 852px;
+    background-image: url(../images/background.png);
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+header {
+    width: 100%; /* header 요소의 너비를 100%로 설정 */
+}
+
+.header-content {
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.page-title {
+    font-size: 23.5px;
+    font-weight: bold;
+    color: #6D460B;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.search-btn,
+.back-btn,
+.home-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+}
+
+.back-btn {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-60%);
+}
+
+.search-btn {
+    position: absolute;
+    right: 72px;
+    top: 50%; 
+    transform: translateY(-70%);
+    margin-top: 3px;
+}
+
+.home-btn {
+    position: absolute;
+    right: 35px; 
+    top: 50%; 
+    transform: translateY(-70%); 
+    margin-top: 3px;
+}
+
+.categories {
+    display: flex;
+    justify-content: center; /* 중앙 정렬 */
+    align-items: center;
+    width: 100%;
+    padding: 10px 5px; /* 위아래 여백을 늘림 */
+    box-sizing: border-box;
+    background: linear-gradient(180deg, #FFFEDB 0%, #FEF1D7 50.5%, #FCFADD 100%);
+    margin-top: 40px; /* 위쪽 마진을 늘림 */
+    margin-bottom: 30px; /* 아래쪽 마진을 늘림 */
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+    overflow-x: auto; /* 가로 스크롤이 필요한 경우 스크롤 표시 */
+    -webkit-overflow-scrolling: touch; /* 모바일에서 부드러운 스크롤 지원 */
+    scrollbar-width: none; /* Firefox에서 스크롤바 숨김 */
+    -ms-overflow-style: none; /* IE/Edge에서 스크롤바 숨김 */
+}
+
+.categories::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera에서 스크롤바 숨김 */
+}
+
+.categories button {
+    flex-shrink: 0; /* 버튼 크기를 유지하도록 설정 */
+    padding: 8px 13px; /* 상하 여백을 조정하고 좌우 여백을 줄임 */
+    background-color: #ffffff;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    color: #6D460B;
+    font-size: 17px; /* 버튼 텍스트 크기 조정 */
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+    margin-right: 20px; /* 버튼 사이의 간격을 조정 */
+    white-space: nowrap; /* 텍스트 줄바꿈 방지 */
+}
+
+.categories button:last-child {
+    margin-right: 0; /* 마지막 버튼의 오른쪽 여백 제거 */
+}
+
+.categories button:hover {
+    background-color: #f0f0f0;
+}
+
+.hot-items .hot {
+    font-size: 20px;
+    color: #6D460B;
+    margin-bottom: 7px;
+    margin-left: 30px;
+}
+
+.hot-items {
+    width: 100%;
+    margin-top: -10px;
+}
+
+.locations {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+}
+
+.location {
+    text-align: center;
+    width: 170px;
+    margin-bottom: 10px;
+    position: relative;
+    top: 0;
+}
+
+.location img {
+    width: 167px; 
+    height: 181px; 
+    border-radius: 20px;
+    margin-bottom: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.location-info {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+    text-align: center;
+    width: 167px; 
+    height: 60px; 
+    margin: 0 auto;
+    position: relative;
+    top: 5px; 
+    margin-top: -5px; 
+    overflow: hidden;
+}
+
+.location-name {
+    font-size: 14px;
+    margin-bottom: -10px;
+    font-weight: bold;
+    text-align: left;
+    padding: 0 10px;
+    margin-top: 10px;
+}
+
+.location-spot {
+    font-size: 14px;
+    margin-bottom: -10px;
+    text-align: left;
+    padding: 0 10px;
+}
+
+.bottom-nav {
+    display: flex;
+    background: linear-gradient(180deg, #FFF 0%, #F1F0FA 100%);
+    position: absolute;
+    bottom: 0;
+    width: 393px;
+    height: 80px;
+    border-radius: 20px 20px 0px 0px;
+    box-shadow: 0px -4px 10px 2px rgba(0, 0, 0, 0.08);
+}
+
+.bottom-nav a {
+    text-decoration: none;
+    color: #333;
+    text-align: center;
+    font-size: 12px;
+    flex: 1;
+    padding: 10px;
+}
+
+.bottom-nav img {
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+}
