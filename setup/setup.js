@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (data.token) {
             console.log('성공:', data);
             localStorage.setItem('token', data.token);
-            window.location.href = '/login/login.html';
+            window.location.href = '/2024-Herethon-9/login/login.html';
         } else {
             console.error('실패:', data);
         }
