@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     const buttons = document.querySelectorAll(".keywords button");
-    const completeBtn = document.getElementById("complete-btn");
+    const completeBtn = document.querySelector(".submit-btn");
     const warningMessage = document.getElementById("warning-message");
     let selectedKeywords = [];
 
