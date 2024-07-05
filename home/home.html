@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <div class="container">
+        <header> <!-- 사용자 닉네임, 프로필 사진 / 검색창 -->
+
+        <div class="user-info">
+            <div class="welcome">
+                <span class="user-name">지현님,</span><br>
+                <span>어서오세요!</span>
+            </div>
+            <div class="profile-picture">
+                <img src="#" alt="프로필 사진">
+            </div>
+        </div>
+            
+            <div class="search-bar">
+                <span class="search-icon"></span>
+                <input type="text" placeholder="Search">
+            </div>
+
+        </header>
+
+
+        <section class="coupons"> <!-- 쿠폰 슬라이더 -->
+            <div class="coupon-slider">
+                <div class="coupon yellow">
+                    <img src=".././images/yellow.png">
+                </div>
+                <div class="coupon pink">
+                    <img src=".././images/pink.png">
+                </div>
+                <div class="coupon orange">
+                    <img src=".././images/orange.png">
+                </div>
+            </div>
+        </section>
+
+
+        <section class="recommendations"> <!-- 사용자 추천 상품 -->
+            <p class="user-recommendation">지현님을 위한 추천 상품</p>
+            <div class="products-wrapper">
+                <div class="products">
+                    <div class="product">
+                        <img src="https://via.placeholder.com/136x147" alt="CGC 검정 자켓">
+                        <div class="product-info">
+                            <p class="product-name"><b>CGC 검정 자켓</b></p>
+                            <p class="product-price">
+                                <span class="discount">20%</span>
+                                <span class="price">55,200원</span></p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="https://via.placeholder.com/136x147" alt="꾸&안 회색 팬츠">
+                        <div class="product-info">
+                            <p class="product-name"><b>꾸&안 회색 팬츠</b></p>
+                            <p class="product-price">
+                                <span class="discount">15%</span> 
+                                <span class="price">19,800원</span></p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="https://via.placeholder.com/136x147" alt="White 하얀 블라우스">
+                        <div class="product-info">
+                            <p class="product-name"><b>White 하얀셔츠</b></p>
+                            <p class="product-price">
+                                <span class="discount">30%</span>
+                                <span class="price">65,500원</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <nav class="bottom-nav"> <!-- 하단의 네비게이션 바 -->
+                <a href="../home/home.html"><img src="../images/nav_home.png" alt="홈 아이콘"></a>
+                <a href="../baby/baby.html"><img src="../images/nav_baby.png" alt="아이 아이콘"></a>
+                <a href="../me/me.html"><img src="../images/nav_me.png" alt="나 아이콘"></a>
+                <a href="../location/location.html"><img src="../images/nav_location.png" alt="장소 아이콘"></a>
+                <a href="../community/community.html"><img src="../images/nav_community.png" alt="커뮤니티 아이콘"></a>
+            </nav>
+        </footer>
+
+    </div>
+    <script src="home.js"></script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.frame {
+    width: 393px;
+    height: 852px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: url('../assets/background.jpg') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.title {
+    margin-top: 77px;
+    color: #8B4513;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.subtitle {
+    margin-top: 10px;
+    color: #8B4513;
+    font-size: 1em;
+}
+
+.keyword-section {
+    margin-top: 30px;
+    padding-left: 20px; /* 왼쪽 패딩 추가 */
+}
+
+.keyword-section h2.section-title {
+    color: #8B4513;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    text-align: left; /* 왼쪽 정렬 */
+}
+
+.keywords {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* 왼쪽 정렬 */
+}
+
+.keywords button {
+    padding: 10px 15px;
+    border: 1px solid #8B4513;
+    border-radius: 25px;
+    background: transparent;
+    color: #8B4513;
+    margin: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap; /* 텍스트 줄바꿈 방지 */
+}
+
+.keywords-top button {
+    width: calc(33.333% - 10px); /* 한 줄에 3개씩 배치 */
+}
+
+.keywords-bottom button {
+    width: calc(25% - 10px); /* 한 줄에 4개씩 배치 */
+}
+
+.keywords button:hover {
+    background-color: #FFD700;
+    color: white;
+}
+
+.submit-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    background-color: #FFCE4F;
+    color: white;
+    font-size: 1.2em;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.submit-btn:hover {
+    background-color: #FFC700;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
