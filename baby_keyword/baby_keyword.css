@@ -67,8 +67,9 @@ body {
 }
 
 .keywords button:hover {
-    background-color: #FFD700;
+    background-color: #FFDA55;
     color: white;
+    border: 0px;
 }
 
 .submit-btn {
