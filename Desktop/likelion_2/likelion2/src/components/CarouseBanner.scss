@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.carousel-banner {
+    position: relative;
+    width: 100%;
+    padding-bottom: 24px;
+}
+
+.banner-content {
+    position: relative;
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto; /* 배너를 중앙 정렬 */
+}
+
+.banner-image {
+    width: 100%;
+    z-index: 0; /* 배너는 가장 뒤에 */
+    position: relative;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%; /* 세로 중앙 정렬 */
+    transform: translateY(-50%);
+    z-index: 1; /* 배너 위로 배치 */
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    width: 40px; /* 화살표 크기 */
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.left-arrow {
+    left: -8px; /* 배너 왼쪽 밖으로 */
+}
+
+.right-arrow {
+    right: -8px; /* 배너 오른쪽 밖으로 */
+}

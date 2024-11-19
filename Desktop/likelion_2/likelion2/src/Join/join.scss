@@ -1,0 +1,87 @@
+.join-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(234, 234, 234);
+  width: 100vw; // 화면 너비를 기준으로 확장
+  height: 100vh; // 화면 높이를 기준으로 확장
+  min-width: 360px; // 최소 너비
+  min-height: 800px; // 최소 높이
+}
+
+.join-content {
+  width: 360px; // 고정 너비
+  height: 800px; // 고정 높이
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.join-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .id-label {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: -10px;
+    margin-bottom: 55px;
+    text-align: left;
+    width: 100%;
+    padding-left: 10px;
+  }
+
+  .password-label {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: -10px;
+    margin-bottom: 55px;
+    text-align: left;
+    width: 100%;
+    padding-left: 10px;
+  }
+
+  .join-input {
+    padding: 18px;
+    margin-bottom: 12px;
+    border: 1px solid #013C58;
+    border-radius: 10px;
+    font-size: 18px;
+    width: 90%;
+  }
+
+  .check-button {
+    padding: 18px;
+    background-color: #013C58;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 140px;
+    font-weight: 700;
+    font-size: 18px;
+    width: 100%;
+  }
+
+  .next-button {
+    padding: 18px;
+    background-color: #013C58;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 70px;
+    font-weight: 700;
+    font-size: 18px;
+    width: 100%;
+  }
+
+
+}

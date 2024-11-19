@@ -1,0 +1,107 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .container {
+    width: 360px;
+    height: 821px;
+    background-color: #f0f0f0;
+    position: relative;
+    font-family: Arial, sans-serif;
+  }
+  
+  .header {
+    margin-top: 90px;
+    background-color: #013C58;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    position: relative;
+  }
+  
+  /* 메인 아이콘, 노련한 이력서 텍스트 컨테이너  */ 
+  .title {
+    display: flex;
+    cursor: pointer;
+  }
+  
+  /*노련한 이력서 텍스트*/
+  .titletext {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+  
+  /*메인 아이콘*/
+  .icon {
+    width: 25px;
+    height: 25px;
+  }
+  
+  /*메뉴 토글 아이콘*/
+  .menu-icon {
+    background: none;
+    border: none;
+    position: absolute;
+    right: 8%;
+    width: 20px;
+    height: 20px;
+    margin-top: 5px;
+    cursor: pointer;
+  }
+  
+  /* 메뉴 열렸을 때 */
+  .menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 68px;
+    width: 200px;
+    height: 50000px;
+    background-color: white;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    color: black;
+    z-index: 99999999999999999999999999;
+    animation: slideIn 0.3s ease-in-out;
+    transform-origin: right center;
+  }
+  
+  .menu.closed {
+    animation: slideOut 0.3s ease-in-out;
+    transform-origin: right center;
+  }
+  
+  /*메뉴 나올 때*/
+  @keyframes slideIn {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  .menu ul {
+    list-style: none;
+  }
+  
+  .menu li {
+    margin-bottom: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .logout {
+    color: red;
+  }
+  
+  .logout-icon {
+    margin-right: 3px;
+  }
